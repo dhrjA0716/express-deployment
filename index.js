@@ -18,7 +18,9 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res) {
     var item = req.body.ele1;
-    items.push(item);
+    if (item && item.trim() !== "") {
+        items.push(item.trim());
+    }
     res.redirect('/');
 });
 
