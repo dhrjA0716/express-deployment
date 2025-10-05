@@ -23,7 +23,21 @@ app.post('/', function(req, res) {
     }
     res.redirect('/');
 });
-
+app.put('/', function(req, res) {
+    var index = req.body.index;
+    var newItem = req.body.ele1;
+    if (items[index] && newItem && newItem.trim() !== "") {
+        items[index] = newItem.trim();
+    }
+    res.redirect('/');
+});
+app.delete('/', function(req, res) {
+    var index = req.body.index;
+    if (items[index]) {
+        items.splice(index, 1);
+    }
+    res.redirect('/');
+});
 
 
 
