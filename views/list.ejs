@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title> Tool list </title>
+    <title>Todo list</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
     <div class="box">
         <h1>Todo list</h1>
     </div>
+
     <div class="box">
-       <% for(var i=0 ; i< ejes.length; i++){%>
+        <% for(var i=0; i < ejes.length; i++) { %>
         <div class="item">
             <input type="checkbox">
-            <p> <%= ejes[i] %></p>
+            <p><%= ejes[i] %></p>
 
             <form action="/?_method=DELETE" method="POST" style="display:inline;">
                 <input type="hidden" name="index" value="<%= i %>">
-                <button type="submit">Delete</button>
+                <button type="submit" class="delete-btn">Delete</button>
             </form>
 
             <form action="/?_method=PUT" method="POST" style="display:inline;">
-    <input type="hidden" name="index" value="<%= i %>">
-    <input type="text" name="ele1" value="<%= ejes[i] %>" placeholder="Edit task">
-    <button type="submit">Edit</button>
-</form>
+                <input type="hidden" name="index" value="<%= i %>">
+                <input type="text" name="ele1" value="<%= ejes[i] %>" placeholder="Edit task">
+                <button type="submit" class="edit-btn">Edit</button>
+            </form>
         </div>
-       <% }%>
+        <% } %>
 
         <form action="/" method="POST">
             <input type="text" name="ele1" placeholder="Enter a new task">
-            <button type="submit">+</button>
+            <button type="submit" class="add-btn">+</button>
         </form>
-
     </div>
 </body>
-
 </html>
-
-
