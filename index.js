@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-
-
 var app = express();
 const port = process.env.PORT || 8000;
 app.use(express.static("public"));
@@ -39,9 +37,6 @@ app.delete('/', function(req, res) {
     res.redirect('/');
 });
 
-
-
-
 app.listen(8000, function() {
     console.log("Server started");
-    });
+});
