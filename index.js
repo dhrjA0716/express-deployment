@@ -7,6 +7,9 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 var items = []
 
 var example="working";
