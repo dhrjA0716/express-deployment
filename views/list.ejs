@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-
 <body>
     <div class="box">
         <h1>Todo list</h1>
@@ -16,16 +15,27 @@
         <div class="item">
             <input type="checkbox">
             <p> <%= ejes[i] %></p>
+
+            <form action="/?_method=DELETE" method="POST" style="display:inline;">
+                <input type="hidden" name="index" value="<%= i %>">
+                <button type="submit">Delete</button>
+            </form>
+
+            <form action="/?_method=PUT" method="POST" style="display:inline;">
+                <input type="hidden" name="index" value="<%= i %>">
+                <input type="text" name="ele1" placeholder="Edit task">
+                <button type="submit">Edit</button>
+            </form>
         </div>
        <% }%>
 
         <form action="/" method="POST">
             <input type="text" name="ele1" placeholder="Enter a new task">
             <button type="submit">+</button>
-
         </form>
 
     </div>
 </body>
 
 </html>
+
