@@ -15,7 +15,7 @@ h1 {
     margin: 50px auto;
     background: white;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
 }
 
 #heading {
@@ -27,7 +27,10 @@ h1 {
     min-height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #f1f1f1;
+    flex-wrap: wrap;
+    padding: 5px 10px;
 }
 
 .item:last-child {
@@ -40,26 +43,25 @@ input:checked + p {
 }
 
 input[type="checkbox"] {
-    margin: 20px;
+    margin: 10px;
 }
 
 p {
     margin: 0;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 200;
+    padding: 10px;
+    font-size: 18px;
     color: #00204a;
+    flex: 1;
 }
 
 form {
-    text-align: center;
-    margin-left: 20px;
+    display: inline-block;
+    margin: 5px;
 }
 
-/* Fixed button styles */
+/* Base button styling */
 button {
     border: none;
-    background-color: #a683e3;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -67,33 +69,49 @@ button {
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    margin: 5px;
 }
 
-button:hover {
-    background-color: #9370db;
-    transform: scale(1.05);
-}
-
-/* Keep the Add (+) button circular */
+/* Add (+) button */
 .add-btn {
     min-height: 50px;
     width: 50px;
     border-radius: 50%;
     font-size: 30px;
     padding-bottom: 6px;
+    background-color: #a683e3;
 }
 
-/* Input styles */
+.add-btn:hover {
+    background-color: #9370db;
+}
+
+/* Edit and Delete buttons */
+.edit-btn {
+    background-color: #6c63ff;
+}
+
+.edit-btn:hover {
+    background-color: #5848d1;
+}
+
+.delete-btn {
+    background-color: #ff4b5c;
+}
+
+.delete-btn:hover {
+    background-color: #e13a4b;
+}
+
+/* Input field styling */
 input[type="text"] {
     text-align: center;
-    height: 60px;
-    top: 10px;
+    height: 40px;
     border: none;
-    background: transparent;
-    font-size: 20px;
-    font-weight: 200;
-    width: 313px;
+    background: #f8f8f8;
+    font-size: 16px;
+    width: 180px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 input[type="text"]:focus {
@@ -110,3 +128,4 @@ footer {
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
+
