@@ -22,10 +22,10 @@
             </form>
 
             <form action="/?_method=PUT" method="POST" style="display:inline;">
-                <input type="hidden" name="index" value="<%= i %>">
-                <input type="text" name="ele1" placeholder="Edit task">
-                <button type="submit">Edit</button>
-            </form>
+    <input type="hidden" name="index" value="<%= i %>">
+    <input type="text" name="ele1" value="<%= ejes[i] %>" placeholder="Edit task">
+    <button type="submit">Edit</button>
+</form>
         </div>
        <% }%>
 
